@@ -7,7 +7,7 @@ This project aims to create a distributed key-value store using etcd, a distribu
 ### Files Structure
 
 - `app.py`: Frontend application built using Streamlit.
-- `client.py`: Main logic for interacting with the etcd cluster.
+- `Client.py`: Main logic for interacting with the etcd cluster.
 - `etcd.config.yml`: Configuration files for multiple etcd nodes.
 
 ## Installation
