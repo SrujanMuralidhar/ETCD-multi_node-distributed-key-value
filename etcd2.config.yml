@@ -1,0 +1,8 @@
+name: etcd-2
+initial-advertise-peer-urls: http://127.0.0.2:2391 
+listen-peer-urls: http://127.0.0.2:2391
+listen-client-urls: http://127.0.0.2:2359,http://localhost:2359 
+advertise-client-urls: http://127.0.0.2:2359 
+initial-cluster-token: etcd-cluster
+initial-cluster: etcd-1=http://127.0.0.2:2390,etcd-2=http://127.0.0.2:2391,etcd-3=http://127.0.0.2:2392
+initial-cluster-state: new
