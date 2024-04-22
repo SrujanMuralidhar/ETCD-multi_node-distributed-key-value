@@ -42,7 +42,7 @@ pip install etcd-python
    To start an etcd node using a configuration file, use the following command:
 
    ```bash
-   etcd --config-file=<path_to_config_file>
+   etcd --config-file <path_to_config_file>
    ```
 
 2. **Run the Frontend**: Start the frontend application by running `app.py`:
@@ -59,10 +59,3 @@ pip install etcd-python
 
 2. **Backend Logic**: If you need to perform operations programmatically, import the `client.py` file into your project and use its functions to interact with the etcd cluster.
 
-## Contributing
-
-Contributions are welcome! Feel free to open an issue or submit a pull request if you have any suggestions or improvements for the project.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
