@@ -1,7 +1,7 @@
 import unittest
 from unittest.mock import MagicMock
 
-from client import *
+from Client import *
 
 class TestEtcdFunctions(unittest.TestCase):
     def setUp(self):

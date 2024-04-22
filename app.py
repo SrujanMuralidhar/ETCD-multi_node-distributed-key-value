@@ -1,9 +1,9 @@
 import streamlit as st 
-import client
+import Client
 
 
 hosts = (('localhost', 2359),('localhost', 2389),('localhost', 2369))
-client = client.connectToServer(hosts)
+client = Client.connectToServer(hosts)
 print(f"Members : {client.members}")
 print(f"Leader : {client.leader}")
         
@@ -19,14 +19,14 @@ choice = st.selectbox("Select an action : ",
                       )
 
 if choice == "List all Keys":
-    keys = client.listAllKeys(client)
+    keys = Client.listAllKeys(client)
     st.write(keys)
 
 elif choice == "Delete a Key":
     keyToBeDeleted = st.text_input("Enter the key to be deleted : ")
     keyDeleteButton = st.button("Delete Key")
     if(keyDeleteButton):
-        flag = client.deleteKeyValue(client,keyToBeDeleted)
+        flag = Client.deleteKeyValue(client,keyToBeDeleted)
         if flag :
             st.success(f"Deleted successfully !!")
         else:
@@ -36,7 +36,7 @@ elif choice == "Get the value for a specified key":
     valueAtKey = st.text_input("Enter the key : ")
     getValueButton = st.button("Get Value")
     if(getValueButton):
-        value = client.getKeyValue(client,valueAtKey)
+        value = Client.getKeyValue(client,valueAtKey)
         if value:
             st.subheader(f"Value : {value}")
         else:
@@ -48,7 +48,7 @@ elif choice == "Insert a Key-Value":
     insertButton = st.button("Insert")
     
     if(insertButton):
-        flag = client.insertKeyValue(client,key,value)
+        flag = Client.insertKeyValue(client,key,value)
         if flag:
             st.success(f"Inserted successfully !!")
         else:
